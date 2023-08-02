@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import './Button';
 import logo from '@/images/logo.svg';
 
 enum Command {
@@ -59,8 +60,8 @@ export default class Home extends LitElement {
           <h1>Lit Boilerplate</h1>
         </div>
         <div class="home__counter">
-          <button class="btn" @click=${() => this._onClick(Command.Inc)}>+</button>
-          <button class="btn" @click=${() => this._onClick(Command.Dec)}>−</button>
+          <button-el class="btn" @click=${() => this._onClick(Command.Inc)}>+</button-el>
+          <button-el class="btn" @click=${() => this._onClick(Command.Dec)}>−</button-el>
           <div class="home__count">${this.counter}</div>
         </div>
       </div>
