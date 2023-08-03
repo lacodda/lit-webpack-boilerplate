@@ -1,9 +1,10 @@
+import { scaffoldingStyles } from '@/styles/scaffolding';
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
 @customElement('info-el')
 export default class Info extends LitElement {
-  static override styles = css`
+  static override styles = [scaffoldingStyles, css`
     .info__container {
       display: grid;
       justify-content: center;
@@ -23,7 +24,7 @@ export default class Info extends LitElement {
         -webkit-text-fill-color: transparent;
       }
     }
-  `;
+  `];
   override render() {
     return html`
       <div class="info__container">

@@ -2,6 +2,7 @@ import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import './Button';
 import logo from '@/images/logo.svg';
+import { scaffoldingStyles } from '@/styles/scaffolding';
 
 enum Command {
   Inc = 1,
@@ -10,7 +11,7 @@ enum Command {
 
 @customElement('home-el')
 export default class Home extends LitElement {
-  static override styles = css`
+  static override styles = [scaffoldingStyles, css`
     .home__container {
       display: grid;
       justify-content: center;
@@ -42,7 +43,7 @@ export default class Home extends LitElement {
       font-weight: 700;
       color: var(--white);
     }
-  `;
+  `];
 
   @property({ type: Number })
   counter = 0;
