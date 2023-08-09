@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "rootDir": "./src",
+    "rootDir": ".",
     "sourceMap": true,
     "declaration": true,
     "moduleResolution": "node",
@@ -37,10 +37,7 @@
       }
     ],
     "paths": {
-      "@/*": ["src/*"],
-      "*": ["node_modules/*"],
-      "@assets/*": ["./assets/*"],
-      "@src/*": ["./src/*"]
+      "@/*": ["src/*"]
     }
   },
   "exclude": ["node_modules", "dist"]

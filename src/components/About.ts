@@ -1,10 +1,9 @@
-import { scaffoldingStyles } from '@/styles/scaffolding';
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
 @customElement('about-el')
 export default class About extends LitElement {
-  static override styles = [scaffoldingStyles, css`
+  static override styles = css`
     .about__container {
       display: grid;
       justify-content: center;
@@ -16,6 +15,7 @@ export default class About extends LitElement {
     .about__title {
       display: flex;
       > h1 {
+        font-size: var(--font-size-h1);
         width: max-content;
         text-transform: uppercase;
         background: var(--teal);
@@ -24,7 +24,7 @@ export default class About extends LitElement {
         -webkit-text-fill-color: transparent;
       }
     }
-  `];
+  `;
   override render() {
     return html`
       <div class="about__container">

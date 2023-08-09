@@ -1,6 +1,6 @@
 import { Router } from '@vaadin/router';
-import './styles/index.scss';
-import './components/App';
+import '@/ui';
+import '@/components/App';
 
 const router = new Router(document.getElementById('app'));
 router.setRoutes([

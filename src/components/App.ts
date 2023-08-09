@@ -1,12 +1,15 @@
 import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import './Navbar';
 
 @customElement('app-el')
 export default class App extends LitElement {
   override render() {
     return html`
-    <navbar-el></navbar-el>
+    <navbar-el>
+      <a href="/">Home</a>
+      <a href="/info">Info</a>
+      <a href="/about">About</a>
+    </navbar-el>
     <slot></slot>
   `;
   }
